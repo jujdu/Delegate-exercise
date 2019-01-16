@@ -1,24 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intern View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InternViewController" customModule="delegates" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5Bp-EL-3Lx">
+                                <rect key="frame" x="25" y="54" width="270" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5Bp-EL-3Lx" secondAttribute="height" multiplier="16:9" id="X7r-oG-Obt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1b-nu-XCQ">
+                                <rect key="frame" x="35" y="347" width="250" height="53"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="1bq-P6-XmP"/>
+                                    <constraint firstAttribute="height" constant="53" id="zmo-1f-HiJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Choose a side">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseSide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ug-6X-opb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2x-yh-8AH">
+                                <rect key="frame" x="30" y="216" width="260" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ha4-Ra-Z4a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p1b-nu-XCQ" secondAttribute="bottom" constant="80" id="6fh-sr-BNr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Bp-EL-3Lx" secondAttribute="trailing" constant="25" id="6ie-Hr-lM3"/>
+                            <constraint firstItem="5Bp-EL-3Lx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="6ns-Nf-x3l"/>
+                            <constraint firstItem="5Bp-EL-3Lx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-120" id="9ft-5i-z9f"/>
+                            <constraint firstItem="5Bp-EL-3Lx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FO1-Hj-gHA"/>
+                            <constraint firstItem="p1b-nu-XCQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Lo7-ol-EPt"/>
+                            <constraint firstItem="Z2x-yh-8AH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="MMB-RE-tmt"/>
+                            <constraint firstItem="Z2x-yh-8AH" firstAttribute="top" secondItem="5Bp-EL-3Lx" secondAttribute="bottom" constant="10" id="i7F-6g-H09"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z2x-yh-8AH" secondAttribute="trailing" constant="30" id="ndY-hm-NZL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="p1b-nu-XCQ" id="Pkg-b9-pu2"/>
+                        <outlet property="logoImage" destination="5Bp-EL-3Lx" id="pUl-Ax-H9v"/>
+                        <outlet property="nameLabel" destination="Z2x-yh-8AH" id="YGw-E7-8A5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Boss View Controller-->
+        <scene sceneID="g8e-l9-Dgt">
+            <objects>
+                <viewController storyboardIdentifier="BossVC" id="Oht-qe-g3v" customClass="BossViewController" customModule="delegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C2Z-bI-wSa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-2y-ZYY">
+                                <rect key="frame" x="25" y="52" width="270" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="0.98389095067977905" green="0.91311413049697876" blue="0.32921785116195679" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gi-fc-TB0">
+                                <rect key="frame" x="90" y="120" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="FvW-Df-sid"/>
+                                    <constraint firstAttribute="height" constant="140" id="Jz2-kr-3PU"/>
+                                </constraints>
+                                <state key="normal" image="imperial"/>
+                                <connections>
+                                    <action selector="imperialButton:" destination="Oht-qe-g3v" eventType="touchUpInside" id="iAO-Rs-JG8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxP-Pf-ax3">
+                                <rect key="frame" x="90" y="280" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="dkO-4e-oZ4"/>
+                                    <constraint firstAttribute="height" constant="140" id="tVv-HD-qpB"/>
+                                </constraints>
+                                <state key="normal" image="rebel"/>
+                                <connections>
+                                    <action selector="rebelButton:" destination="Oht-qe-g3v" eventType="touchUpInside" id="NGY-uj-R6q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="b3a-2y-ZYY" firstAttribute="centerX" secondItem="rsR-FH-WpE" secondAttribute="centerX" id="EcK-xP-C2y"/>
+                            <constraint firstItem="WxP-Pf-ax3" firstAttribute="centerX" secondItem="rsR-FH-WpE" secondAttribute="centerX" id="Kgt-3p-ucf"/>
+                            <constraint firstItem="b3a-2y-ZYY" firstAttribute="top" secondItem="rsR-FH-WpE" secondAttribute="top" constant="32" id="RIQ-7b-ETX"/>
+                            <constraint firstItem="1gi-fc-TB0" firstAttribute="centerY" secondItem="rsR-FH-WpE" secondAttribute="centerY" constant="-60" id="YrK-uE-SOL"/>
+                            <constraint firstItem="1gi-fc-TB0" firstAttribute="centerX" secondItem="rsR-FH-WpE" secondAttribute="centerX" id="jR1-Jh-PJd"/>
+                            <constraint firstItem="WxP-Pf-ax3" firstAttribute="top" secondItem="1gi-fc-TB0" secondAttribute="bottom" constant="20" id="xMh-uq-dXh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rsR-FH-WpE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kaz-69-4dw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920.79999999999995" y="116.49175412293854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imperial" width="72" height="72"/>
+        <image name="logo" width="2000" height="855"/>
+        <image name="rebel" width="294.9119873046875" height="294.9119873046875"/>
+    </resources>
 </document>
